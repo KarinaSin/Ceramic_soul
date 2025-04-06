@@ -1,0 +1,59 @@
+@use "/src/sass/base/variables.scss" as v;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+figure,
+p,
+ol,
+ul {
+	margin: 0;
+}
+
+ol[role="list"],
+ul[role="list"] {
+	list-style: none;
+	padding-inline: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+img {
+	display: block;
+	max-inline-size: 100%;
+}
+
+
+html {
+	font-family: "Barlow", sans-serif;
+	scroll-behavior: smooth;
+	// font-size: 62.5%; можно, но плохо так делать
+	// 1rem = 10px;
+	// 10px = 0.625rem;
+}
+
+body {
+	background-color: v.$light;
+}
+
+.container {
+    width: 100%;
+    padding: 0 10px;
+}
+
+@media screen and (min-width:768px) {
+	.container {
+	max-width: 720px;
+	padding: 0;
+	margin: 0 auto;
+}
+}
