@@ -109,4 +109,42 @@ try {
     ],{
       errorsContainer: document.querySelector('#checkbox').parentElement.parentElement.querySelector(".checkbox-error-message"),
     });
+} catch (e) { }
+
+try {
+  const validatorForm = new JustValidate(".footer__form");
+  validatorForm
+    .addField(
+      "#footer__email",
+      [
+        {
+          rule: "required",
+        },
+        {
+          rule: "email",
+        },
+      ],
+      {
+        errorsContainer: document
+          .querySelector("#footer__email")
+          .parentElement.parentElement.querySelector(
+            ".footer__email-error-message"
+          ),
+      }
+    )
+    .addField(
+      "#footer__checkbox",
+      [
+        {
+          rule: "required",
+        },
+      ],
+      {
+        errorsContainer: document
+          .querySelector("#footer__checkbox")
+          .parentElement.parentElement.querySelector(
+            ".footer__checkbox-error-message"
+          ),
+      }
+    );
 } catch (e) {}
