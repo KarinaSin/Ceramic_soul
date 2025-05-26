@@ -54,15 +54,20 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: clamp(450px, 37.5vw,640px);
+      width: clamp(450px, 37.5vw, 640px);
       height: 633px;
       object-fit: cover;
     }
     &__title {
       padding-left: 571px;
     }
+    &__cta {
+      animation-name: slideIn;
+      animation-duration: 3s;
+    }
   }
 }
+
 
 @media screen and (min-width: 1920px) {
   .promo {
@@ -70,19 +75,19 @@
     &__wrapper {
       margin-top: 79px;
     }
-      &__img {
+    &__img {
       width: 330px;
       height: 460px;
     }
     &__btn {
-    margin: 50px auto 0 auto;
+      margin: 50px auto 0 auto;
+    }
+    &__title {
+      padding-top: 384px;
+      padding-left: 642px;
+    }
+    &__potter {
+      height: 900px;
+    }
   }
-  &__title {
-    padding-top: 384px;
-    padding-left: 642px;
-  }
-   &__potter {
-    height: 900px;
-   }
-}
 }
